@@ -1,64 +1,70 @@
-import React, {useState} from "react";
-import { PiQrCode } from "react-icons/pi";
-import { CiHome,CiImageOn } from "react-icons/ci";
-import { RiContactsLine, RiContactsBook3Line } from "react-icons/ri";
-import { AiOutlineFileText } from "react-icons/ai";
+import React, { useState } from "react";
+import img from "../assets/logo.png";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
-
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <>
-      <div className="w-screen fixed p-5 pt-10  flex justify-center">
-        <ul className="w-[50%] px-5 py-3 rounded-xl border-[0.01rem] border-transparent flex justify-between  bg-clip bg-gradient-to-r from-slate-200 to-slate-100 md:w-[100%]  mb:hidden">
-          <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer">
-            Home
-          </li>
-          <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer">
-            About
-          </li>
-          <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer">
-            Skills
-          </li>
-          <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer">
-            Portfolio
-          </li>
-          <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer">
-            Contact
-          </li>
-        </ul>
-      </div>
-      <div className="absolute hidden mb:block w-screen p-5 border-[2px] border-slate-200 rounded-xl bottom-0">
-        {showMenu && <div className="w-[100%] flex justify-between items-center">
-          <h1 className="text-[1.4rem]">Darshan</h1>
-          <PiQrCode className="text-[2rem]" />
-        </div>}
-        <div className="w-[100%] p-4">
-          <ul className="flex gap-20 flex-wrap justify-center items-center">
-            <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer flex flex-col items-center">
-              <CiHome className="text-[1.5rem]" />
-              Home
+      <nav className="w-screen fixed pt-5 px-10  flex justify-center">
+        <div className=" text-white bg-brand-light/50 transform-translate-x-1/2 backdrop-blur-2xl p-3 px-6 rounded-full bg-[#0a2723] border-[0.01rem] border-transparent flex justify-center items-center gap-5 md:w-[100%] md:justify-between md:p-2 md:px-4">
+          <div className="w-9 h-9 bg-[#00a789] flex justify-center items-center rounded-full">
+            <img src={img} alt="" className="w-8 h-8 object-contain" />
+          </div>
+          <div className="flex gap-5 md:hidden">
+            <li className="text-sm list-none font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+              Experience
             </li>
-            <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer flex flex-col items-center">
-              <RiContactsLine className="text-[1.5rem]" />
-              About
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+              Projects
             </li>
-            <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer flex flex-col items-center">
-              <AiOutlineFileText className="text-[1.5rem]" />
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
               Skills
             </li>
-            <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer flex flex-col items-center">
-              <CiImageOn className="text-[1.5rem]" />
-              Portfolio
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+              Achievements
             </li>
-            <li className="text-[1.2rem] text-slate-400 hover:text-black cursor-pointer flex flex-col items-center">
-              <RiContactsBook3Line className="text-[1.5rem]" />
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+              Recommendation
+            </li>
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
               Contact
             </li>
-          </ul>
+            <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+              Resume
+            </li>
+          </div>
+          <h1 className="hidden md:flex font-semibold text-sm">DARKARS33</h1>
+          <RxHamburgerMenu className="hidden md:flex text-xl text-white/25 hover:text-white transition-colors duration-200" onClick={() => setShowMenu(!showMenu)} />
+
+          {showMenu && <div className="hidden md:flex absolute p-4 w-[100%] bg-[#071c19] rounded-lg top-20 left-0 shadow-xl bg-brand-light backdrop-blur-2xl opacity-1 transform-none translate-x-10">
+            <div className="flex flex-col gap-5 ">
+              <li className="text-sm list-none font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Experience
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Projects
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Skills
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Achievements
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Recommendation
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Contact
+              </li>
+              <li className="text-sm list-none  font-semibold uppercase hover:text-[#00a789] cursor-pointer">
+                Resume
+              </li>
+            </div>
+          </div>}
         </div>
-      </div>
+      </nav>
     </>
   );
 };
