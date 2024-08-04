@@ -14,12 +14,20 @@ export default {
       'lg': {'max': '1023px'},
       // => @media (max-width: 1023px) { ... }
 
-      'md': {'max': '766px'},
+      'md': {'max': '768px'},
       // => @media (max-width: 767px) { ... }
 
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
-      'mb': {'max': '450px'},
+      'mb': {'max': '550px'},
+    },
+    colors: {
+     primary: "#041d19",
+     secondary: "#09221e",
+     text: "#00a789",
+     white: "#fefdfc",
+     custom: "#04392f",
+     lightColor: "#ccd1cf",
     },
   },
   plugins: [],

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Home from "./pages/Home";
+import Design from "./Components/Design";
+import Navbar from "./Components/Navbar";
+import Hero from "./pages/Hero";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,7 +9,9 @@ function App() {
   return (
     <>
       <div>
-        <Home />
+        <Navbar />
+        <Design />
+        <Hero />
       </div>
     </>
   );

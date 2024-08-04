@@ -13,3 +13,46 @@ h1{
 body{
           background-color: #041d19;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+          
+}
+
+.circle{
+    z-index: 0;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotate(-45deg);
+    border: 50%;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .17), rgba(0, 35, 29, .17));
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    animation: pulse 10s ease-in-out infinite;
+}
+
+.circle1{
+          z-index: 0;
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          transform: rotate(-45deg);
+          border: 50%;
+          background: linear-gradient(180deg, hsla(0, 0%, 100%, .17), rgba(0, 35, 29, .17));
+          border-radius: 50%;
+          top: 0;
+          right: 2%;
+          transition: all .5s;
+          animation: pulse 10s ease-in-out infinite;
+      }

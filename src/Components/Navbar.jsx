@@ -7,11 +7,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-screen fixed pt-5 px-10  flex justify-center">
-        <div className=" text-white bg-brand-light/50 transform-translate-x-1/2 backdrop-blur-2xl p-3 px-6 rounded-full bg-[#0a2723] border-[0.01rem] border-transparent flex justify-center items-center gap-5 md:w-[100%] md:justify-between md:p-2 md:px-4">
-          <div className="w-9 h-9 bg-[#00a789] flex justify-center items-center rounded-full">
-            <img src={img} alt="" className="w-8 h-8 object-contain" />
-          </div>
+      <nav className="w-screen fixed pt-5 px-10  flex justify-center z-50">
+        <div className=" text-white bg-brand-light/50 transform-translate-x-1/2 backdrop-blur-2xl shadow-xl p-3 px-6 rounded-full bg-primary border-[0.01rem] border-none flex justify-center items-center gap-5 md:w-[100%] md:justify-between md:p-2 md:px-4">
+        <div
+              className="w-[2.5rem] h-[2.5rem] bg-custom rounded-full object-center"
+              style={{
+                backgroundImage: `url(${img})`,
+                backgroundPosition: "bottom",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "40px ",
+              }}
+            ></div>
           <div className="flex gap-5 md:hidden">
             <li className="text-sm list-none font-semibold uppercase hover:text-[#00a789] cursor-pointer">
               Experience
