@@ -7,8 +7,8 @@ import { MdEmail } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="z-50 w-screen p-5  flex justify-center">
-      <div className="w-[70vw] p-4 mt-48 md:w-[100%] md:mt-20">
+    <div className="z-50 w-screen py-10  flex place-content-center">
+      <div className="max-w-5xl p-4 mt-36 md:w-[100%] md:mt-20">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-10">
             <div
@@ -21,10 +21,10 @@ const Hero = () => {
               }}
             ></div>
             <div className="flex flex-col gap-3">
-              <h1 className="text-4xl font-semibold text-white mb:text-3xl">
+              <h1 className="text-5xl font-semibold text-white mb:text-3xl">
                 Darshan Garad
               </h1>
-              <p className="text-2xl font-semibold text-text mb:text-xl">
+              <p className="text-xl font-semibold text-text mb:text-xl">
                 Full Stack Developer
               </p>
               <div className="flex gap-5 text-lightColor text-[1.5rem]">
@@ -61,13 +61,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <p className="text-xl text-white text-justify">
+          <p className="text-xl text-lightColor text-justify">
             Hi there 👋, I'm a software engineer focused on creating fast,
             reliable, and engaging software solutions and web applications. I
             thrive on connecting with others and continuously pushing the
             boundaries of digital innovation.
           </p>
-          <div className="w-[100%] p-3 bg-custom rounded-full flex items-center gap-5 md:flex-col md:items-start md:rounded-xl">
+          <div className="w-[100%] p-2 bg-custom rounded-full flex items-center gap-5 md:flex-col md:items-start md:rounded-xl">
             <a href="#" className="p-2 bg-text rounded-full px-3 font-semibold">Open to work</a>
             <p className="text-white">Seeking Web Development Internship Opportunities</p>
           </div>
