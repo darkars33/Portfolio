@@ -21,13 +21,13 @@ const Hero = () => {
               }}
             ></div>
             <div className="flex flex-col gap-3">
-              <h1 className="text-5xl font-semibold text-white mb:text-3xl">
+              <h1 className="text-5xl font-semibold text-white mb:text-3xl overflow-hidden">
                 Darshan Garad
               </h1>
               <p className="text-xl font-semibold text-text mb:text-xl">
                 Full Stack Developer
               </p>
-              <div className="flex gap-5 text-lightColor text-[1.5rem]">
+              <div className="flex gap-5 z-50 text-lightColor text-[1.5rem]">
                 <a
                   href="https://github.com/darkars33"
                   target="_blank"
